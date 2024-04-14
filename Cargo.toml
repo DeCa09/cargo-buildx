@@ -1,5 +1,5 @@
 [package]
-name = "buildx"
+name = "cargo-buildx"
 description = "placeholder to save name for later package"
 license = "MIT OR Apache-2.0"
 version = "0.1.1"
