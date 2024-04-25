@@ -1,0 +1,2 @@
+#!/bin/ash
+/usr/local/bin/zig cc -static -target x86_64-linux-musl $@
