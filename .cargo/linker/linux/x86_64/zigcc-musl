@@ -1,2 +1,13 @@
 #!/bin/sh
-/opt/homebrew/bin/zig cc -static -target x86_64-linux-musl $@
+
+TARGET_ARCH="x86_64"
+TARGET_OS="linux-musl"
+
+TARGET_PLATFORM="${TARGET_ARCH}-${TARGET_OS}"
+ZIG_PATH=$(which zig)
+
+if [ -z "$ZIG_PATH" ]; then
+    echo "Zig compiler not found in PATH"
+    exit 1
+fi
+"$ZIG_PATH" cc -static -target "$TARGET_PLATFORM" "$@"

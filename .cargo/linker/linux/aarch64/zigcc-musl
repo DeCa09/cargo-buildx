@@ -1,2 +1,8 @@
 #!/bin/sh
-/opt/homebrew/bin/zig cc -static -target aarch64-linux-musl $@
+
+ZIG_PATH=$(which zig)
+if [ -z "$ZIG_PATH" ]; then
+    echo "Zig compiler not found in PATH"
+    exit 1
+fi
+"$ZIG_PATH" cc -static -target aarch64-linux-musl "$@"
