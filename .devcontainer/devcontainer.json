@@ -1,6 +1,6 @@
 {
 	// Name for the dev container
-	"name": "hi",
+	"name": "cargo-buildx",
 
 	// Point to a Docker Compose file
 	"dockerComposeFile": "./docker-compose.yaml",
@@ -18,7 +18,7 @@
 
 	// File mounts
 	"mounts": [
-		"source=~/Desktop/hi,target=/app,type=bind,consistency=cached"
+		"source=~/Projects/gold/cargo-buildx,target=/app,type=bind,consistency=cached"
 	],
 
 	// Prevent the container from shutting down
