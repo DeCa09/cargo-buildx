@@ -1,2 +1,2 @@
 #!/bin/sh
-/usr/local/bin/zig cc -static -target x86_64-linux-musl $@
+/opt/homebrew/bin/zig cc -static -target x86_64-linux-musl $@

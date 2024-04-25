@@ -3,14 +3,14 @@ x86_linux = "--target x86_64-unknown-linux-musl"
 aarch_linux = "--target aarch64-unknown-linux-musl"
 
 [target.aarch64-unknown-linux-musl]
-linker = "/app/.cargo/linker/linux/aarch64/zigcc-musl"
+linker = ".cargo/linker/linux/aarch64/zigcc-musl"
 rustflags = [
     "-C", "target-feature=+crt-static",
    "-C", "link-self-contained=no", #DO NOT USE self-contained libs shipped by some rust toolchains
     ]
 
 [target.x86_64-unknown-linux-musl]
-linker = "/app/.cargo/linker/linux/x86_64/zigcc-musl"
+linker = ".cargo/linker/linux/x86_64/zigcc-musl"
 rustflags = [
     "-C", "target-feature=+crt-static",
    "-C", "link-self-contained=no", #DO NOT USE self-contained libs shipped by some rust toolchains
